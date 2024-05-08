@@ -5,7 +5,7 @@ UnVoidable is a plugin designed to address the issue of players falling into the
 ## Key Features
 
 - **Performance Optimization:** Developed with server performance in mind, ensuring smooth operation.
-- **User-Friendly Configuration:** Equipped with a straightforward configuration file and a reload plugin for easy setup.
+- **User-Friendly Configuration:** Equipped with a straightforward configuration file and a reload command for easy setup.
 - **Cross-Version Compatibility:** Supports Minecraft versions from 1.8.8 to the latest, ensuring broad applicability.
 
 ## Available Commands
@@ -24,7 +24,7 @@ For any queries or assistance with UnVoidable, please visit the [GitHub reposito
 
 1. Obtain the latest version of UnVoidable from the [Modrinth Page](modrinth.com/plugin/unvoidable).
 2. Place the downloaded `.jar` file into your server's `plugins` directory.
-3. Restart or reload your server to activate the plugin.
+3. Restart your server to activate the plugin.
 4. Customize the `config.yml` file located in `plugins/UnVoidable/config.yml` to suit your needs.
 
 ## License
