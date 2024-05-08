@@ -1,0 +1,12 @@
+name: UnVoidable
+version: '${project.version}'
+main: dev.furq.unvoidable.UnVoidable
+api-version: '1.20'
+authors: [Furq]
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.23
+commands:
+  unvoidable:
+    permission: unvoidable.admin
+    description: "UnVoidable Admin Commands"
+    tabCompleter: dev.furq.unvoidable.tabcompleter.TabCompleter
