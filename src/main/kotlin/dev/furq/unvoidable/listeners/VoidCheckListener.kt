@@ -24,7 +24,8 @@ class VoidCheckListener(private val plugin: UnVoidable) : Listener {
             if (worldConfig != null) {
                 WorldConfig(
                     safeCords = worldConfig.getString("safe-cords"),
-                    voidYLevel = worldConfig.getInt("void-y-level")
+                    voidYLevel = worldConfig.getInt("void-y-level"),
+                    facing = worldConfig.getString("facing")
                 )
             } else {
                 null
@@ -43,11 +44,25 @@ class VoidCheckListener(private val plugin: UnVoidable) : Listener {
             if (player.velocity.y < 0) {
                 if (yLevel >= it.voidYLevel - 1 && yLevel <= it.voidYLevel + 1) {
                     val safeCords = it.safeCords?.split(",")
+                    val facingValue = it.facing
                     if (safeCords != null && safeCords.size == 3) {
                         val x = safeCords[0].toDouble()
                         val y = safeCords[1].toDouble()
                         val z = safeCords[2].toDouble()
-                        val location = Location(player.world, x, y, z)
+                        var yaw: Float? = null
+                        var pitch: Float? = null
+
+                        if (facingValue != null && facingValue != "false") {
+                            val facingData = facingValue.split(",")
+                            if (facingData.size == 2) {
+                                yaw = facingData[0].toFloatOrNull()
+                                pitch = facingData[1].toFloatOrNull()
+                            }
+                        }
+
+                        val targetYaw = yaw ?: player.location.yaw
+                        val targetPitch = pitch ?: player.location.pitch
+                        val location = Location(player.world, x, y, z, targetYaw, targetPitch)
 
                         object : BukkitRunnable() {
                             override fun run() {
@@ -68,5 +83,5 @@ class VoidCheckListener(private val plugin: UnVoidable) : Listener {
         }
     }
 
-    private data class WorldConfig(val safeCords: String?, val voidYLevel: Int)
+    private data class WorldConfig(val safeCords: String?, val voidYLevel: Int, val facing: String)
 }

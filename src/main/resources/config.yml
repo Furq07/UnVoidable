@@ -5,13 +5,17 @@ worlds:
   world1:
     # Coordinates where players will be teleported to if they fall into the void.
     safe-cords: 0, 80, 0
+    # Specify yaw and pitch values (e.g., "yaw,pitch"), or set to "false" to disable
+    facing: 0, 0
     # The Y-level is where you want the plugin to consider the void to be located at.
     void-y-level: -64
 
   # Follows the same patterns.
   world2:
     safe-cords: 0, 80, 0
+    facing: 0, 0
     void-y-level: -64
   world3:
     safe-cords: 0, 80, 0
+    facing: 0, 0
     void-y-level: -64
