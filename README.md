@@ -5,12 +5,14 @@ UnVoidable is a plugin designed to address the issue of players falling into the
 ## Key Features
 
 - **Performance Optimization:** Developed with server performance in mind, ensuring smooth operation.
-- **User-Friendly Configuration:** Equipped with a straightforward configuration file and a reload command for easy setup.
+- **User-Friendly:** Equipped with a straightforward configuration file and commands for easy setup.
 - **Cross-Version Compatibility:** Supports Minecraft versions from 1.8.8 to the latest, ensuring broad applicability.
 
 ## Available Commands
 
 - **/unvoidable reload:** Allows for the quick reloading of the plugin's configuration without server restart.
+- **/unvoidable setspawn:** This command sets the safe spawn coordinates and facing direction based on your current location.
+- **/unvoidable setvoidlevel <y-void-level>:** This command sets the Y-level where the void begins.
 
 ## Permissions
 
@@ -18,15 +20,15 @@ UnVoidable is a plugin designed to address the issue of players falling into the
 
 ## Support
 
-For any queries or assistance with UnVoidable, please visit the [GitHub repository](https://github.com/Furq07/UnVoidable/issues) or join the [Discord Server](https://discord.gg/furqdev).
+For any queries or assistance with UnVoidable, please visit the [GitHub repository](https://github.com/Furq07/UnVoidable/issues).
 
 ## Installation Steps
 
-1. Obtain the latest version of UnVoidable from the [Modrinth Page](https://modrinth.com/plugin/unvoidable).
+1. Obtain the latest version of UnVoidable from the [Modrinth Page](modrinth.com/plugin/unvoidable).
 2. Place the downloaded `.jar` file into your server's `plugins` directory.
 3. Restart your server to activate the plugin.
 4. Customize the `config.yml` file located in `plugins/UnVoidable/config.yml` to suit your needs.
 
 ## License
 
-UnVoidable is released under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
+UnVoidable is released under the MIT License.
