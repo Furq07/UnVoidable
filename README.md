@@ -24,11 +24,11 @@ For any queries or assistance with UnVoidable, please visit the [GitHub reposito
 
 ## Installation Steps
 
-1. Obtain the latest version of UnVoidable from the [Modrinth Page](modrinth.com/plugin/unvoidable).
+1. Obtain the latest version of UnVoidable from the [Modrinth Page](https://modrinth.com/plugin/unvoidable).
 2. Place the downloaded `.jar` file into your server's `plugins` directory.
 3. Restart your server to activate the plugin.
 4. Customize the `config.yml` file located in `plugins/UnVoidable/config.yml` to suit your needs.
 
 ## License
 
-UnVoidable is released under the MIT License.
+UnVoidable is released under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
