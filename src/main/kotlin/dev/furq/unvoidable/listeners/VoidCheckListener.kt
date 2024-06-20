@@ -3,6 +3,7 @@ package dev.furq.unvoidable.listeners
 import dev.furq.unvoidable.UnVoidable
 import org.bukkit.Location
 import org.bukkit.Sound
+import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerMoveEvent
@@ -68,19 +69,27 @@ class VoidCheckListener(private val plugin: UnVoidable) : Listener {
                             override fun run() {
                                 player.teleport(location)
                                 player.sendMessage("§aTeleported to a safe location.")
-                                var endermanTeleportSound: Sound? = null
-                                try {
-                                     endermanTeleportSound = Sound.valueOf("ENTITY_ENDERMAN_TELEPORT")
-                                } catch (e: IllegalArgumentException) {
-                                     endermanTeleportSound = Sound.valueOf("ENDERMAN_TELEPORT")
-                                }
-                                player.playSound(player.location, endermanTeleportSound, 1.0f, 1.0f)
+                                playEndermanTeleportSound(player)
                             }
                         }.runTask(plugin)
                     }
                 }
             }
         }
+    }
+
+    private fun playEndermanTeleportSound(player: Player) {
+        var endermanTeleportSound: Sound? = null
+        try {
+            endermanTeleportSound = Sound.valueOf("ENTITY_ENDERMAN_TELEPORT")
+        } catch (e: IllegalArgumentException) {
+            try {
+                endermanTeleportSound = Sound.valueOf("ENTITY_ENDERMEN_TELEPORT")
+            } catch (e: IllegalArgumentException) {
+                endermanTeleportSound = Sound.valueOf("ENDERMAN_TELEPORT")
+            }
+        }
+        player.playSound(player.location, endermanTeleportSound, 1.0f, 1.0f)
     }
 
     private data class WorldConfig(val safeCords: String?, val voidYLevel: Int, val facing: String)

@@ -13,10 +13,10 @@ class TabCompleter : TabCompleter {
     ): List<String>? {
         if (command.name.equals("unvoidable", ignoreCase = true)) {
             if (args.size == 1) {
-                return listOf("reload")
+                return listOf("reload", "setspawn", "setvoidlevel")
             } else if (args.size == 2) {
                 when (args[0].lowercase()) {
-                  //  "reload" -> return listOf("option1", "option2")
+                    "setvoidlevel" -> return listOf("<void-y-level>")
                    else -> return null
                 }
             }
