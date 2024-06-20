@@ -12,7 +12,7 @@ UnVoidable is a plugin designed to address the issue of players falling into the
 
 - **/unvoidable reload:** Allows for the quick reloading of the plugin's configuration without server restart.
 - **/unvoidable setspawn:** This command sets the safe spawn coordinates and facing direction based on your current location.
-- **/unvoidable setvoidlevel <y-void-level>:** This command sets the Y-level where the void begins.
+- **/unvoidable setvoidlevel `<y-void-level>`:** This command sets the Y-level where the void begins.
 
 ## Permissions
 
