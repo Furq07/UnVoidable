@@ -20,7 +20,7 @@ UnVoidable is a plugin designed to address the issue of players falling into the
 
 ## Support
 
-For any queries or assistance with UnVoidable, please visit the [GitHub repository](https://github.com/Furq07/UnVoidable/issues).
+For any queries or assistance with UnVoidable, please visit the [GitHub repository](https://github.com/Furq07/UnVoidable/issues) or Join [Discord Server](https://discord.gg/XhZzmvzPDV)
 
 ## Installation Steps
 
